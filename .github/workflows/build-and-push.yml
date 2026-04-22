@@ -31,3 +31,4 @@ jobs:
                 tags: 
                     ${{ secrets.DOCKER_IMAGE}}:${{ github.sha }}
                     ${{ secrets.DOCKER_IMAGE}}:latest
+                    

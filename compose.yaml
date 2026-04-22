@@ -1,4 +1,25 @@
 services:
+
+  incident-api:
+    image: ghcr.io/josaPlus/incident-api:latest
+    container_name: IncidentAPI
+    ports:
+      - 3000:3000
+  enviroment:
+      - PORT=${PORT}
+      - MAILER_PASWORD=${MAILER_PASSWORD}
+      - MAILER_EMAIL=${MAILER_EMAIL}
+      - MAILER_SERVICE=${MAILER_SERVICE}
+      - MAPBOX_TOKEN=${MAPBOX_TOKEN}
+      - DB_HOST=${DB_HOST}
+      - DB_NAME=${DB_NAME}
+      - DB_PORT=${DB_PORT}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - DB_USER=${DB_USER}
+      - APPINSIGHTS_CONNECTION_STRING=${APPINSIGHTS_CONNECTION_STRING}
+      - REDIS_HOST=${REDIS_HOST}
+      - REDIS_PORT=${REDIS_PORT}
+
   postgres:
     image: postgis/postgis:16-master
     container_name: postgresDB
