@@ -6,3 +6,4 @@ dist
 compose.yml
 Dockerfile
 README.md
+.github
